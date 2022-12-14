@@ -28,7 +28,7 @@ string[] FillArray(int sizeArray)
     string[] array = new string[sizeArray];
     for (int i = 0; i < sizeArray; i++)
     {
-        Console.Write($"Введите строку {i+1} массива: ");
+        Console.Write($"Введите строку {i + 1} массива: ");
         array[i] = Console.ReadLine();
     }
     return array;
@@ -42,7 +42,17 @@ void PrintArray(string[] array)
     }
 }
 
-
-
-Console.Write("Введите колиество строк добавляемых в массив: ");
+Console.Write("Введите количество строк добавляемых в массив: ");
 int sizeArray = Convert.ToInt32(Console.ReadLine());
+int sizeResultArray = 0;
+
+string[] array = new string[sizeArray];
+array = FillArray(sizeArray);
+sizeResultArray = AmountElements(array);
+
+if (sizeResultArray == 0) Console.Write("В исходном массиве нет строк длинной 3 или меньше символов");
+else
+{
+    Console.WriteLine("В нашем массиве содержатся следующие строки, которые содержат 3 или меньше символов");
+    PrintArray(FillResultArray(array, sizeResultArray));
+}
