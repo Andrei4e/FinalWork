@@ -22,3 +22,11 @@ string[] FillArray(string[] array, int count)
     }
     return resultArray;
 }
+
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Count(); i++)
+    {
+        Console.WriteLine($"{array[i]}");
+    }
+}
