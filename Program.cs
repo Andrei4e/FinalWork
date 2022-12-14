@@ -17,7 +17,8 @@ string[] FillArray(string[] array, int count)
         if (array[i].Length <= 3)
         {
             resultArray[j] = array[i];
-            j +=1;
+            j += 1;
         }
     }
+    return resultArray;
 }
