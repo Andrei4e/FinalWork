@@ -7,3 +7,17 @@
     }
     return count;
 }
+
+string[] FillArray(string[] array, int count)
+{
+    int j = 0;
+    string[] resultArray = new string[count];
+    for (int i = 0; i < array.Count(); i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            resultArray[j] = array[i];
+            j +=1;
+        }
+    }
+}
